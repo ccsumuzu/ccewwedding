@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<!--
+	Astral by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+-->
+<html>
+	<head>
+		<title>En-Wei & Charles' Wedding</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Wrapper-->
+			<div id="wrapper">
+
+				<!-- Nav -->
+					<nav id="nav">
+						<a href="http://ccewwedding.com" class="icon fa-home active fa-fw""><span>Event</span></a>
+						<a href="http://ccewwedding.com#map" class="icon fa-map-marker fa-fw"><span>Map</span></a>
+						<a href="#" class="icon fa-envelope-o fa-fw"><span>RSVP</span></a>
+						<a href="http://ccewwedding.com#photo" class="icon fa-film fa-fw"><span>Photo</span></a>
+						<a href="http://ccewwedding.com#registry" class="icon fa-gift fa-fw"><span>Registry</span></a>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- RSVP -->
+							<article id="rsvp" class="panel rsvp">
+								<article class="google-form-mobile">
+									<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdkc75rKshcPFDlGiykIXQV8b4J_G_qMxJHcP8utapk_WpDfA/viewform?embedded=true" width="100%" height="2400" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+								</article>
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<div id="footer">
+						<ul class="copyright">
+							<li><a href="http://ccewwedding.com">Go Back 回到首頁&nbsp;</a></li><li>
+							<a href="contact.html">Contact Us 聯絡我們</a></li>
+							<li>&copy; 2016 C.-C. Chao</li>
+						</ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/skel-viewport.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+			<script>
+				$(function() {
+					var foo = $('#gallery');
+					foo.poptrox();
+				});
+
+				skel.breakpoints({
+				    landscape: "(min-width: 737px)",
+				    portrait:  "(max-width: 736px)",
+				});
+
+				skel.on("+portrait", function() {
+					$(function () {
+					    $("article.item").slice(0, 5).show();
+					    $("#loadMore").on('click', function (e) {
+					        e.preventDefault();
+					        $("article.item:hidden").slice(0, 5).slideDown();
+					        if ($("article.item:hidden").length == 0) {
+					            $("#loadMore").fadeOut('slow');
+					        }
+					        $('html,body').animate({
+					            scrollTop: $(this).offset().top
+					        }, 1500);
+					    });
+					});				
+				});
+			</script>
+
+			<script>
+			  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-85410491-1', 'auto');
+			  ga('send', 'pageview');
+			</script>
+
+
+	</body>
+</html>
